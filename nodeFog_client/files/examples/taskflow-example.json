@@ -1,0 +1,112 @@
+{
+	"id":"fY5Fdt3c",
+	"taskFlowExecution": {
+		"id": "1",
+		"element": "list",
+		"type": "sequential",
+		"tasks": [{
+			"id": "11",
+			"element": "job",
+			"action": "function(task, require){ const sleep = require('sleep');function sumNumbers(a,b) {sleep.sleep(5);return a+b;}task.setResult(sumNumbers(3,2).toString());}"
+		}, {
+			"id": "12",
+			"element": "list",
+			"type": "concurrent",
+			"tasks": [{
+					"id": "121",
+					"element": "list",
+					"type": "sequential",
+					"tasks": [{
+						"id": "1211",
+						"element": "job",
+						"action": "function(task, require){ const sleep = require('sleep');function sumNumbers(a,b) {sleep.sleep(5);return a+b;}task.setResult(sumNumbers(#11#,2).toString());}"
+					},{
+						"id": "1212",
+						"element": "list",
+						"type": "concurrent",
+						"tasks": [{
+							"id": "12121",
+							"element": "job",
+							"action": "function(task, require){ const sleep = require('sleep');function sumNumbers(a,b) {sleep.sleep(5);return a+b;}task.setResult(sumNumbers(#1211#,2).toString());}"
+						},{
+							"id": "12122",
+							"element": "job",
+							"action": "function(task, require){ const sleep = require('sleep');function sumNumbers(a,b) {sleep.sleep(5);return a+b;}task.setResult(sumNumbers(#1211#,2).toString());}"
+						},{
+							"id": "12123",
+							"element": "job",
+							"action": "function(task, require){ const sleep = require('sleep');function sumNumbers(a,b) {sleep.sleep(5);return a+b;}task.setResult(sumNumbers(#1211#,2).toString());}"
+						}]
+					}, {
+						"id": "1213",
+						"element": "job",
+						"action": "function(task, require){ const sleep = require('sleep');function sumNumbers(a,b) {sleep.sleep(5);return a+b;}task.setResult(sumNumbers(#12121#,sumNumbers(#12122#,#12123#)).toString());}"
+					}]
+				},{
+						"id": "122",
+						"element": "list",
+						"type": "sequential",
+						"tasks": [{
+							"id": "1221",
+							"element": "job",
+							"action": "function(task, require){ const sleep = require('sleep');function sumNumbers(a,b) {sleep.sleep(5);return a+b;}task.setResult(sumNumbers(#11#,2).toString());}"
+						},{
+							"id": "1222",
+							"element": "list",
+							"type": "concurrent",
+							"tasks": [{
+								"id": "12221",
+								"element": "job",
+								"action": "function(task, require){ const sleep = require('sleep');function sumNumbers(a,b) {sleep.sleep(5);return a+b;}task.setResult(sumNumbers(#1221#,2).toString());}"
+							},{
+								"id": "12222",
+								"element": "job",
+								"action": "function(task, require){ const sleep = require('sleep');function sumNumbers(a,b) {sleep.sleep(5);return a+b;}task.setResult(sumNumbers(#1221#,2).toString());}"
+							},{
+								"id": "12223",
+								"element": "job",
+								"action": "function(task, require){ const sleep = require('sleep');function sumNumbers(a,b) {sleep.sleep(5);return a+b;}task.setResult(sumNumbers(#1221#,2).toString());}"
+							}]
+						}, {
+							"id": "1223",
+							"element": "job",
+							"action": "function(task, require){ const sleep = require('sleep');function sumNumbers(a,b) {sleep.sleep(5);return a+b;}task.setResult(sumNumbers(#12221#,sumNumbers(#12222#,#12223#)).toString());}"
+						}]
+					},{
+							"id": "123",
+							"element": "list",
+							"type": "sequential",
+							"tasks": [{
+								"id": "1231",
+								"element": "job",
+								"action": "function(task, require){ const sleep = require('sleep');function sumNumbers(a,b) {sleep.sleep(5);return a+b;}task.setResult(sumNumbers(#11#,2).toString());}"
+							},{
+								"id": "1232",
+								"element": "list",
+								"type": "concurrent",
+								"tasks": [{
+									"id": "12321",
+									"element": "job",
+									"action": "function(task, require){ const sleep = require('sleep');function sumNumbers(a,b) {sleep.sleep(5);return a+b;}task.setResult(sumNumbers(#1231#,2).toString());}"
+								},{
+									"id": "12322",
+									"element": "job",
+									"action": "function(task, require){ const sleep = require('sleep');function sumNumbers(a,b) {sleep.sleep(5);return a+b;}task.setResult(sumNumbers(#1231#,2).toString());}"
+								},{
+									"id": "12323",
+									"element": "job",
+									"action": "function(task, require){ const sleep = require('sleep');function sumNumbers(a,b) {sleep.sleep(5);return a+b;}task.setResult(sumNumbers(#1231#,2).toString());}"
+								}]
+							}, {
+								"id": "1233",
+								"element": "job",
+								"action": "function(task, require){ const sleep = require('sleep');function sumNumbers(a,b) {sleep.sleep(5);return a+b;}task.setResult(sumNumbers(#12321#,sumNumbers(#12322#,#12323#)).toString());}"
+							}]
+						}]
+				},{
+					"id": "13",
+					"element": "job",
+					"action": "function(task, require){ const sleep = require('sleep');function sumNumbers(a,b) {sleep.sleep(5);return a+b;}task.setResult(sumNumbers(#1213#,sumNumbers(#1223#,#1233#)).toString());}"
+				}]
+			}
+}
