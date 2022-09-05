@@ -1,0 +1,29 @@
+{
+  "name": "nodefog-worker",
+  "version": "1.0.0",
+  "description": "nodeFog worker engine",
+  "main": "src/Main.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "deam": "node ./src/Main.js",
+    "test": "mocha --recursive tests"
+  },
+  "keywords": [
+    "nodeFog"
+  ],
+  "author": "José Luis Urbano Orgaz",
+  "license": "GPL v.3",
+  "dependencies": {
+    "battery": "^1.0.1",
+    "battery-level": "^3.0.0",
+    "browser-battery": "^2.0.0",
+    "express": "^4.17.1",
+    "npm": "^6.14.13",
+    "properties-reader": "^2.2.0",
+    "sleep": "^6.3.0",
+    "sqlite3": "^5.0.2",
+    "systeminformation": "^4.34.20"
+  }
+}
