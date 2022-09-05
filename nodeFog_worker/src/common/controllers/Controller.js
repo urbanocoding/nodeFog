@@ -1,9 +1,10 @@
+
+'use strict';
+
 /**
  * Controlador genérico inmutable para la aplicación
  * @author José Luis Urbano Orgaz
  */
-'use strict';
-
 module.exports = class Controller  {
 
   constructor(app) {

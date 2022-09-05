@@ -1,7 +1,4 @@
-/**
- * Controlador de mensajes de registro
- * @author José Luis Urbano Orgaz
- */
+
 'use strict';
 
 const nodeFogPath = '../../../';
@@ -9,6 +6,11 @@ const VariableUtils = require(nodeFogPath + 'src/common/utils/VariableUtils.js')
 const AppConfiguration = require(nodeFogPath + 'src/common/model/AppConfiguration.js');
 const Controller = require(nodeFogPath + 'src/common/controllers/Controller.js');
 
+/**
+ * LogController
+ * @description Controlador de mensajes de registro
+ * @author José Luis Urbano Orgaz
+ */
 module.exports = class LogController extends Controller {
 
     /**

@@ -1,7 +1,3 @@
-/**
- * Controller for app initialization
- * @author José Luis Urbano Orgaz
- */
 'use strict';
 
 //Imports
@@ -19,6 +15,10 @@ const ExecutionRequest = require(nodeFogPath + 'src/common/model/ExecutionReques
 const slavePropertiesPath = 'config/slaves.properties';
 const modulesPropertiesPath = 'config/modules.properties';
 
+/**
+ * Controller for app initialization
+ * @author José Luis Urbano Orgaz
+ */
 module.exports = class AppInitController extends Controller {
 
   /**
@@ -32,6 +32,11 @@ module.exports = class AppInitController extends Controller {
      this._initConfiguration = initConfiguration;
    }
 
+   /**
+    * Obtiene una instancia de nodo esclavo dada su ruta en string
+    * @param {String} linkNodePath Ruta al nodo
+    * @returns {SlaveNode} Instancia del nodo esclavo
+    */
    _getLinkNode(linkNodePath) {
     const splittedLinkNodePath = linkNodePath.split(':');
     const url = splittedLinkNodePath[0];
@@ -48,6 +53,9 @@ module.exports = class AppInitController extends Controller {
     return undefined;
    }
 
+   /**
+    * Inicializa los nodos esclavos desde el argumento en memoria
+    */
    _initSlaveNodesConfigFromArgs() {
     const linkNodePath = this._initConfiguration.getLink();
     if(VariableUtils.isDefined(linkNodePath)) {

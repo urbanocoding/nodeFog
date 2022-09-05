@@ -1,13 +1,14 @@
-/**
- * Controlador genérico inmutable para los controladores de las APIs con arquitectura DEAM
- * @author José Luis Urbano Orgaz
- */
+
 'use strict';
 
 const nodeFogPath = '../../../';
 const Controller = require(nodeFogPath + 'src/common/controllers/Controller.js');
 const LogController = require(nodeFogPath + "src/common/controllers/LogController");
 
+/**
+ * Controlador genérico inmutable para los controladores de las APIs con arquitectura DEAM
+ * @author José Luis Urbano Orgaz
+ */
 module.exports = class DeamController extends Controller {
 
     constructor(app, logController = new LogController(app)) {

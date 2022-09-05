@@ -1,10 +1,15 @@
 'use strict';
 
+/**
+ * RequestController
+ * @description Clase estática para facilitar la realización de peticiones remotas
+ * @author José Luis Urbano Orgaz
+ */
 module.exports = class RequestController {
 
 	/**
-	 * Executes all remote requests
-	 * @param {ExecutionRequest} request Execution request model
+	 * Ejecuta una petición remota dado el modelo de ExecutionRequest
+	 * @param {ExecutionRequest} request Modelo de Execution Request
 	 */
 	static executeRequest(executionRequest) {
 		const remoteConnection = executionRequest.getRemoteConnection();
@@ -13,10 +18,10 @@ module.exports = class RequestController {
 	}
 
 	/**
-	 * Makes a remote request
-	 * @param {RemoteConnection} remoteConnection
-	 * @param {function} requestDelegatedAction remote worker's job
-	 * @param {Object[]} requestActionParameters parameters to send to the funtion TODO are really necessary, the can be initialized when setting up the function on client
+	 * Realiza una petición remota
+	 * @param {RemoteConnection} remoteConnection Instancia del modelo de conexión
+	 * @param {Object} requestDelegatedAction Elemento a enviar
+	 * @param {ExecutionRequest} request Modelo de Execution Request
 	 */
 	static doRequest(remoteConnection, requestedTask = {blank: 'blank'}, executionRequest) {
 		const http = require("http");
